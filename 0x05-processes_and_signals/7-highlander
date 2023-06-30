@@ -1,14 +1,10 @@
 #!/usr/bin/env bash
-# Displays line indefinety and prints message upon reciving a sigkill message
+# Displays line indefinety and prints message upon reciving a sigkill 
 
-
-function handle_sigTerm {
-        echo "I am invincible!!"
-}
+trap "echo 'I am invincible!!!'" 15
 
 while true
 do
         echo "To infinity and beyond"
-	trap handle_sigTerm SIGTERM
         sleep 2
 done
