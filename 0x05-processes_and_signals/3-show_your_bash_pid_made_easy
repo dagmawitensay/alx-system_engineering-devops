@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Display processes without ps
+
+top|grep bash
